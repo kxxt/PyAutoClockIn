@@ -11,12 +11,9 @@ python3 clockin.py
 
 ## 可选参数
 打开`clockin.py`可以看到以下两个参数。
-```python
-retrymax=2
-printToConsole=True
-```
 - `retrymax`为最大重试次数
 - `printToConsole`为是否打印到控制台
+- `silent`为是否静默运行
 
 ## 应用场景
 - 在电脑上手动运行来打卡

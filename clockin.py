@@ -5,7 +5,7 @@ from datetime import datetime
 import traceback
 retrymax=2
 printToConsole=True
-
+silent=False
 try:
     f=open("users.txt")
     log=open("log.txt","a")
@@ -23,6 +23,8 @@ if not users:
 options=webdriver.ChromeOptions()
 mobileEmulation = {'deviceName': 'iPhone X'}
 options.add_experimental_option('mobileEmulation', mobileEmulation)
+if silent:
+    options.add_argument('--headless')
 for user in users:
     for i in range(retrymax):
         try:
