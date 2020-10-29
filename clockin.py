@@ -23,6 +23,10 @@ if not users:
 options=webdriver.ChromeOptions()
 mobileEmulation = {'deviceName': 'iPhone X'}
 options.add_experimental_option('mobileEmulation', mobileEmulation)
+options.add_argument('--no-sandbox')
+options.add_argument('--disable-gpu')
+options.add_argument('--hide-scrollbars')
+options.add_argument('blink-settings=imagesEnabled=false')
 if silent:
     options.add_argument('--headless')
 for user in users:
