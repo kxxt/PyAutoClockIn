@@ -3,9 +3,11 @@ from selenium import webdriver
 from time import sleep
 from datetime import datetime
 import traceback
+import platform
 retrymax=2
 printToConsole=True
 silent=False
+chromeBinaryPath=None
 try:
     f=open("users.txt")
     log=open("log.txt","a")
@@ -27,12 +29,15 @@ options.add_argument('--no-sandbox')
 options.add_argument('--disable-gpu')
 options.add_argument('--hide-scrollbars')
 options.add_argument('blink-settings=imagesEnabled=false')
+options.add_argument('--disable-dev-shm-usage')
 if silent:
     options.add_argument('--headless')
+if chromeBinaryPath:
+    options.binary_location= chromeBinaryPath
 for user in users:
     for i in range(retrymax):
         try:
-            driver=webdriver.Chrome("./chromedriver",chrome_options=options)
+            driver=webdriver.Chrome( "chromedriver.exe" if platform.system()=="Windows" else"./chromedriver",chrome_options=options)
             driver.get("https://xsc-health.wh.sdu.edu.cn/mobile/index.html#/common/office/login")
             driver.maximize_window()
             driver.implicitly_wait(10)
@@ -45,7 +50,7 @@ for user in users:
             driver.implicitly_wait(5)
             label=driver.find_element_by_class_name("grid-label")
             label.click()
-            sleep(10)
+            sleep(6)
             try:driver.execute_script("a=document.getElementsByClassName(\"weui-dialog__btn\")[0];a.click()")
             except : pass
             driver.implicitly_wait(5)
