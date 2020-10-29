@@ -8,6 +8,7 @@ retrymax=2
 printToConsole=True
 silent=False
 chromeBinaryPath=None
+logSucceededRecord=True
 try:
     f=open("users.txt")
     log=open("log.txt","a")
@@ -60,5 +61,6 @@ for user in users:
             writelog(f"Error occurred while clocking in ,try number = {i}, User = {user}.\nStack Trace:{traceback.format_exc()}\n")
             writelog(f"===== Error End  @ {datetime.now()}  =====")
         else:
+            if logSucceededRecord:writelog(f"Success , user {user} , time {datetime.now()}")
             break
 log.close()

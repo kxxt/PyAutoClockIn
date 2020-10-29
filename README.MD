@@ -18,10 +18,11 @@ python3 clockin.py
 
 打开`clockin.py`可以看到以下两个参数。
 
-- `retrymax`为最大重试次数
-- `printToConsole`为是否打印到控制台
-- `silent`为是否静默运行 , 若要在服务器上运行请把此项设置为`True`
-- `chromeBinaryPath`自己指定Chrome浏览器路径 , 常用于Windows下
+- `retrymax` : 为最大重试次数
+- `printToConsole` : 为是否打印到控制台
+- `silent` : 为是否静默运行 , 若要在服务器上运行请把此项设置为`True`
+- `chromeBinaryPath` : 自己指定Chrome浏览器路径 , 常用于Windows下
+- `logSucceededRecord` : 将成功打卡的记录也进行Log
 
 ## 应用场景
 
