@@ -36,6 +36,8 @@ def writelog(msg):
     log.write(msg)
     if printToConsole:print(msg)
 if not users:
+    writelog("Warning : no users in users.txt\nApp exiting.\n")
+    sleep(5)
     exit(1)
 options=webdriver.ChromeOptions()
 mobileEmulation = {'deviceName': 'iPhone X'}
@@ -75,7 +77,7 @@ for user in users:
             writelog(f"Error occurred while clocking in ,try number = {i}, User = {user}.\nStack Trace:{traceback.format_exc()}\n")
             writelog(f"===== Error End  @ {datetime.now()}  =====")
         else:
-            if logSucceededRecord:writelog(f"Success , user {user} , time {datetime.now()}")
+            if logSucceededRecord:writelog(f"Success , user {user} , time {datetime.now()}\n")
             break
         finally:
             sleep(5)
