@@ -16,7 +16,7 @@ python3 clockin.py
 
 ## 可选参数
 
-打开`clockin.py`可以看到以下两个参数。
+打开`clockin.py`可以看到以下几个参数。
 
 - `retrymax` : 为最大重试次数
 - `printToConsole` : 为是否打印到控制台
