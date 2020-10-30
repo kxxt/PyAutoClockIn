@@ -3,6 +3,13 @@
 这是一个用python编写的自动打卡程序，使用selenium框架。
 > Made by a sduwh student for sduwh students.
 
+## 下载
+
+1. GitHub Release
+2. 抗揍云 : 
+   1. nochrome : https://wws.lanzous.com/igTjvhw01za
+   2. standardalone : https://wws.lanzous.com/idxrrhw053c
+
 ## 使用方法
 
 ### Windows Exe 版本
