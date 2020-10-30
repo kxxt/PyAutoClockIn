@@ -5,11 +5,13 @@ from datetime import datetime
 import traceback
 import platform
 import json
+# fallback values for settings.json
 retrymax=2
 printToConsole=True
 silent=False
 chromeBinaryPath=None
 logSucceededRecord=True
+# end fallback values
 try:
     f=open("users.txt")
     log=open("log.txt","a")
