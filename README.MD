@@ -5,6 +5,24 @@
 
 ## 使用方法
 
+### Windows Exe 版本
+
+> 注意 : 
+> nochrome版本需要自己手动指定chrome路径.
+> 
+> 请在`settings.json`文件中添加一条
+> `"chrome":"到你的chrome.exe的路径(请勿忘记转义)"`
+
+在程序目录下新建users.txt , 将学号写入users.txt,一行一个.
+
+双击运行`clockin.exe`
+
+如有下图的警示, 请允许程序通过防火墙
+![允许程序通过防火墙](alert.png)
+
+程序执行过程中没有异常即打卡成功
+### Python 脚本
+
 将学号写入users.txt,一行一个
 
 ```bash
