@@ -64,5 +64,7 @@ for user in users:
             if logSucceededRecord:writelog(f"Success , user {user} , time {datetime.now()}")
             break
         finally:
+            sleep(5)
             driver.quit()
+            
 log.close()
