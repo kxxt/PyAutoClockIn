@@ -1,4 +1,5 @@
 Remove-Item -r dist
+Remove-Item release-nochrome.zip
 pyinstaller clockin.spec
 Copy-Item chromedriver.exe dist\
 Copy-Item README.MD dist\README.MD

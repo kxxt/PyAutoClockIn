@@ -1,5 +1,6 @@
 # 请将Chrom(ium/e) 安装放置在 chrome-win 文件夹下
 Remove-Item -r dist
+Remove-Item release-standardalone.zip
 pyinstaller clockin.spec
 Copy-Item chromedriver.exe dist\
 Copy-Item README.MD dist\README.MD
