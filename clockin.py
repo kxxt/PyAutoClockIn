@@ -4,6 +4,7 @@ from time import sleep
 from datetime import datetime
 import traceback
 import platform
+import json
 retrymax=2
 printToConsole=True
 silent=False
@@ -18,6 +19,17 @@ except:
     exit(-1)
 finally:
     f.close()
+try:
+    s=open("settings.json",encoding="utf8")
+    settings=json.load(s)
+    if "chrome" in settings:chromeBinaryPath=settings["chrome"]
+    if "retrymax" in settings:retrymax= settings["retrymax"]
+    if "silent" in settings:silent= settings["silent"]
+    if "logsucceeded" in settings:logSucceededRecord= settings["logsucceeded"]
+    if "print2con" in settings:printToConsole= settings["print2con"]
+except:
+    if printToConsole:print("settings.json not found or corrupted. Use default settings.")
+finally:s.close()
 def writelog(msg):
     log.write(msg)
     if printToConsole:print(msg)
