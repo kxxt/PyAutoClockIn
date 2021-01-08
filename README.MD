@@ -3,6 +3,9 @@
 这是一个用python编写的自动打卡程序，使用selenium框架。
 > Made by a sduwh student for sduwh students.
 
+## 告示
+因学校迁移到新的打卡系统 , 本项目已失效.
+
 ## 下载
 
 1. GitHub Release
