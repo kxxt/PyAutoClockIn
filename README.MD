@@ -6,6 +6,8 @@
 ## 告示
 因学校迁移到新的打卡系统 , 本项目已失效.
 
+新项目已基本完工: https://github.com/kxxt/PyAutoClockSduIn
+
 ## 下载
 
 1. GitHub Release
